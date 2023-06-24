@@ -4,8 +4,7 @@ from django.db import models
 
 
 class GenericModelMixin(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    created_at = models.DateTimeField(null=True, auto_now_add=True)
+    created_date_time = models.DateTimeField(null=True, auto_now_add=True)
     updated_at = models.DateTimeField(null=True, auto_now=True)
 
     objects = models.Manager()
